@@ -15,10 +15,10 @@ Like James's program, it handles configuration in a JSON file. Name it "config.j
     "access_token_secret": ""
 }
 ```
-- expectSpeed is the speed you're paying for
+- expectSpeed is the speed you're paying for in mbits/s.
 - timeToTest is the time to test your download speed in ms. I found 5 seconds was good.
 - ISP is your ISP's twitter account. 
-- `consumer_key, consumer_key, access_token_key, access_token_secret` are you secret keys from your application. You can make a new app [here.](https://apps.twitter.com/app/new)
+- `consumer_key, consumer_key, access_token_key, access_token_secret` are you secret keys from your application. You can make a new app [here](https://apps.twitter.com/app/new).
 
 
 ## How do i run this?
