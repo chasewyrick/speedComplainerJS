@@ -23,6 +23,7 @@ Like James's program, it handles configuration in a json file which should look 
 
 ## How do i run this?
 ---
+You need node 7.7.3 or later and git for this to work.
 ### Automatic Installation
 Well, for anyone with a bash or shell based terminal, this nifty command will download everything for you. You will need to set your consumer_key and all that manually, though.
 ```
