@@ -2,7 +2,7 @@
 ---
 This project is inspired by [james-atkinson's SpeedComplainer](https://github.com/james-atkinson/speedcomplainer). 
 
-Like James's program, it handles configuration in a json file which should look something like this:
+Like James's program, it handles configuration in a JSON file. Name it "config.json" and it should look like this:
 
 ```
 {
