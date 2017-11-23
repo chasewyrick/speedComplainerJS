@@ -14,6 +14,7 @@ sppedTest.on('data', data => { //do once before going on interval.
   if (parseInt(data.speeds.download, 10) < parseInt(config.expectSpeed, 10)) { //if tested speed is less than expected speed, send tweet.
     twitterClient.post('statuses/update', {status: `@${config.ISP} Why is my download speed under ${config.expectSpeed} Mbit/s like i'm paying for? I just tested it and got ${Math.round(data.speeds.download)} Mbits/s.`}, function(error, tweet, response) {
       //tweet will contain information about the tweet sent, if it sends
+      console.log("tweeted")      
       if (error) {
         console.log(error) //log error if there is one
       }
@@ -22,11 +23,13 @@ sppedTest.on('data', data => { //do once before going on interval.
 });
 
 setInterval(function() {
+  console.log("Starting test.")
   sppedTest.on('data', data => {
     console.log(`output: ${data.speeds.download}`);
     if (parseInt(data.speeds.download, 10) < parseInt(config.expectSpeed, 10)) { //if tested speed is less than expected speed, send tweet.
       twitterClient.post('statuses/update', {status: `@${config.ISP} Why is my download speed under ${config.expectSpeed} Mbits/s like i'm paying for? I just tested it and got ${Math.round(data.speeds.download)} Mbits/s.`}, function(error, tweet, response) {
         //tweet will contain information about the tweet sent, if it sends
+        console.log("tweeted")
         if (error) {
           console.log(error) //log error if there is one
         }
